@@ -244,8 +244,10 @@ Target: public `shasank0001/MLstack-V1`. The user chose to leave the project unl
 - [x] Review README guidance and established project examples; rewrite onboarding and documentation links.
 - [x] Exclude credentials, generated files, environments, run state and scratch work; preserve local copies.
 - [x] Validate a clean source checkout, check documentation links and scan the staged content for secrets.
-- [ ] Create the public GitHub repository, push the initial commit and verify its visibility and contents.
+- [x] Create the public GitHub repository, push the initial commit and verify its visibility and contents.
 
 Preparation notes: used GitHub’s `create-readme` skill after source review, with Pi/MLflow/Typer README examples. Scratch research was moved under ignored `work/`; local environments and run state were preserved. Added setup/contributor guides and a Linux CI workflow with pinned action revisions. A clean source export revealed an environment-dependent memory-path test; it now explicitly tests override precedence and restores environment values. Updated only the Undici/Zod transitive resolutions to patched versions while retaining Pi 1.3.0. Known-key and token-pattern scanning plus staged Markdown link checks passed; generated/local files are excluded.
 
 Final local preparation: fresh npm install, type-check, all 85 tests (zero skips), README init/status commands, staged link/credential checks and zero-vulnerability npm audit passed on 24 October 2026. Detailed scope is recorded in `docs/validation.md`.
+
+Published repository: https://github.com/shasank0001/MLstack-V1 — public, default branch `main`. Initial source commit `269bef7` was pushed and its remote hash and root contents verified. Local dependency environments, keys, scratch research and experiment state were retained outside Git. GitHub CI runs independently of the passing local clean-checkout checks. The project remains unlicensed by explicit user choice.
