@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mlstack.local/schemas/metrics-v1.json",
+  "title": "MLStack metrics document v1",
+  "type": "object",
+  "required": ["schema_version", "metrics"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100000,
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "step"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "maxLength": 250, "pattern": "\\S" },
+          "value": { "type": "number" },
+          "step": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+          "timestamp": { "type": "integer", "minimum": 0, "maximum": 9007199254740991, "description": "Optional Unix epoch milliseconds" }
+        }
+      }
+    }
+  },
+  "$comment": "Runtime additionally requires unique (name, step) pairs and finite values. Files are limited to 32 MiB. Run association and evaluation protocol come from the approved run record."
+}

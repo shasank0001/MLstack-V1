@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-22",
+  "model": "openrouter/minimax/minimax-m3.1-flash:free",
+  "task": "evaluation",
+  "samples_per_condition": 1,
+  "fixture": "Identical source artifacts: train-only scaler/C=1 baseline; full-data scaler/C=2 candidate. Scores are user-reported; data and captured runs absent.",
+  "conditions": [
+    {
+      "condition": "no-playbooks",
+      "elapsed_ms": 52284,
+      "words": 584,
+      "tool_calls": 14,
+      "provider_failure": null
+    },
+    {
+      "condition": "playbooks",
+      "elapsed_ms": 54226,
+      "words": 720,
+      "tool_calls": 16,
+      "provider_failure": null
+    }
+  ],
+  "manual_review": {
+    "both": [
+      "Detected preprocessing fitted before splitting.",
+      "Detected simultaneous C change and rejected a candidate recommendation.",
+      "Noted absent captured runs/data; did not execute or edit source."
+    ],
+    "control_limitations": [
+      "Assumed identical split membership from code/seed without data confirmation.",
+      "Asserted optimistic bias and proposed a larger tuning/repetition plan than the first corrective check required."
+    ],
+    "skill_limitations": [
+      "Assumed identical split membership without data confirmation.",
+      "Asserted a directional regularization/bias effect without feature statistics or results.",
+      "Proposed all arms use train-only scaling, then included a global-scaling arm.",
+      "Inferred mechanisms from hypothetical score closeness, without handling interactions.",
+      "Added arbitrary seed counts and more output without demonstrating a better decision."
+    ],
+    "conclusion": "No demonstrated added benefit on this single pair. Structural/runtime checks and the full workflow pass do not establish instruction efficacy."
+  },
+  "follow_up": "Evaluation guidance tightened after the probe; no live matched rerun of the revised wording. Both skill structures and references revalidated.",
+  "raw_report": "work/skill-checks/probe-hC738l/report.json",
+  "scope": "One model, one task, one sample per condition. No statistical quality or latency conclusion."
+}

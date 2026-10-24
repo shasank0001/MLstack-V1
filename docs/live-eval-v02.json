@@ -1,0 +1,153 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-21",
+  "model": "openrouter/minimax/minimax-m3.1-flash:free",
+  "passed": true,
+  "failure": null,
+  "report": "work/agent-evals/pytorch-VSJlM2/agent-eval-report.json",
+  "automated_tests": {
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0
+  },
+  "phases": [
+    {
+      "phase": "baseline",
+      "duration_ms": 19131
+    },
+    {
+      "phase": "candidate-and-finding",
+      "duration_ms": 16180
+    },
+    {
+      "phase": "fresh-session-recall",
+      "duration_ms": 20067
+    },
+    {
+      "phase": "correction",
+      "duration_ms": 14300
+    },
+    {
+      "phase": "actual-failure",
+      "duration_ms": 28203
+    },
+    {
+      "phase": "refused-launch",
+      "duration_ms": 7468
+    },
+    {
+      "phase": "start-and-stop",
+      "duration_ms": 15773
+    }
+  ],
+  "approvals": [
+    {
+      "phase": "baseline",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "candidate-and-finding",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "actual-failure",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "refused-launch",
+      "kind": "run",
+      "approved": false
+    },
+    {
+      "phase": "start-and-stop",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "start-and-stop",
+      "kind": "stop",
+      "approved": true
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-3ac5051e-423",
+      "name": "baseline-lr0.01-epochs12-seed7",
+      "status": "completed",
+      "metric": "val_accuracy",
+      "final_value": 0.484375,
+      "ingestion": "complete",
+      "has_job": true,
+      "exit_code": 0,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-27eaed23-d8f",
+      "name": "candidate-lr0.1-epochs12-seed7",
+      "status": "completed",
+      "metric": "val_accuracy",
+      "final_value": 0.71875,
+      "ingestion": "complete",
+      "has_job": true,
+      "exit_code": 0,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-5fcd6831-180",
+      "name": "diagnostic-lr-nan-epochs12-seed7",
+      "status": "failed",
+      "metric": "val_accuracy",
+      "final_value": null,
+      "ingestion": "not_available",
+      "has_job": true,
+      "exit_code": 1,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-ff9775ee-d3c",
+      "name": "candidate-lr0.9-epochs12-seed7",
+      "status": "proposed",
+      "metric": "val_accuracy",
+      "final_value": null,
+      "ingestion": "pending",
+      "has_job": false,
+      "exit_code": null,
+      "signal": null,
+      "reason": null,
+      "child_alive": null,
+      "mlflow_synced": false
+    },
+    {
+      "id": "run-1eaaf055-f7e",
+      "name": "cancellation-check-lr0.01-epochs2000-sleep0.1-seed7",
+      "status": "cancelled",
+      "metric": "val_accuracy",
+      "final_value": null,
+      "ingestion": "not_available",
+      "has_job": true,
+      "exit_code": null,
+      "signal": "SIGTERM",
+      "reason": "User requested cancellation",
+      "child_alive": false,
+      "mlflow_synced": true
+    }
+  ],
+  "limits": [
+    "Synthetic CPU task, one seed per configuration; no statistical significance or general recommendation established.",
+    "Passed assertions verify durable state, measurements, approvals and outcomes; generated prose is not exhaustively correct.",
+    "Observed model issues include verbosity, evidence citation miscounting, and describing an unlaunched proposal as no new run.",
+    "The final evaluator report-path cleanup was type-checked and source-scan checked locally after this live run."
+  ]
+}

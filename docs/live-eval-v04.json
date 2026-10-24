@@ -1,0 +1,130 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-22",
+  "model": "openrouter/minimax/minimax-m3.1-flash:free",
+  "passed": true,
+  "phases": [
+    {
+      "phase": "project-definition",
+      "duration_ms": 100817
+    },
+    {
+      "phase": "project-plan",
+      "duration_ms": 73503
+    },
+    {
+      "phase": "context-preference",
+      "duration_ms": 13205
+    },
+    {
+      "phase": "baseline",
+      "duration_ms": 19758
+    },
+    {
+      "phase": "candidate-and-research",
+      "duration_ms": 35630
+    },
+    {
+      "phase": "fresh-session-recall",
+      "duration_ms": 37658
+    },
+    {
+      "phase": "context-correction",
+      "duration_ms": 17066
+    },
+    {
+      "phase": "correction",
+      "duration_ms": 58484
+    },
+    {
+      "phase": "actual-failure",
+      "duration_ms": 56544
+    },
+    {
+      "phase": "refused-launch",
+      "duration_ms": 42688
+    },
+    {
+      "phase": "start-and-stop",
+      "duration_ms": 39791
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-7f3315fa-814",
+      "status": "completed",
+      "final_metric": 0.484375,
+      "capture_status": "complete",
+      "mlflow_run_id": "03bc86fe787f4b2f929c2fc6836886d4",
+      "mlflow_error": null
+    },
+    {
+      "id": "run-cf46883e-f91",
+      "status": "completed",
+      "final_metric": 0.71875,
+      "capture_status": "complete",
+      "mlflow_run_id": "7b73cd0b50ee49d08d3f4658ba72f0fb",
+      "mlflow_error": null
+    },
+    {
+      "id": "run-36c8fcf0-855",
+      "status": "failed",
+      "final_metric": null,
+      "capture_status": "complete",
+      "mlflow_run_id": "c5c0aa99a4644b23a7e3b0d9dc26652a",
+      "mlflow_error": null
+    },
+    {
+      "id": "run-d2cea875-0bf",
+      "status": "proposed",
+      "final_metric": null,
+      "capture_status": null,
+      "mlflow_run_id": null,
+      "mlflow_error": null
+    },
+    {
+      "id": "run-7f0406eb-f23",
+      "status": "cancelled",
+      "final_metric": null,
+      "capture_status": "complete",
+      "mlflow_run_id": "782bb62ce4d740cfa3665059d7530337",
+      "mlflow_error": null
+    }
+  ],
+  "context_records": [
+    {
+      "id": "d53c75cb-ea22-4282-9ade-c02c482b97d9",
+      "scope": "project",
+      "key": "reporting.style",
+      "text": "Report uncertainty and limitations first, then the measured values and run IDs. Keep reports concise.",
+      "source": "agent",
+      "updated_at": "2026-10-22T10:05:19.842Z"
+    }
+  ],
+  "research": {
+    "files": [
+      {
+        "path": "research/learning-rate.md",
+        "title": "Learning-rate comparison (synthetic CPU classifier)",
+        "sha256": "d77ce833fddcc4e6c5ad6973b2be3252dae70356198287195fa27dd160f44cfe",
+        "modified_at": "2026-10-22T10:06:10.768Z"
+      }
+    ],
+    "total": 1,
+    "omitted": 0,
+    "bounded": false
+  },
+  "automated_tests": {
+    "passed": 77,
+    "failed": 0,
+    "skipped": 0
+  },
+  "raw_report": "work/agent-evals/pytorch-VH3y23/.mlstack/agent-eval-report.json",
+  "limits": [
+    "Synthetic CPU task and one seed only; not full V1 acceptance.",
+    "Outcome assertions do not validate every generated sentence or prove skill benefit.",
+    "Early evaluator assertion expected the wrong artifact prefix; initial failure retained and full corrected rerun passed.",
+    "Model prose was verbose, included speculative optimization explanations, and initially confused a comparison delta direction before correcting the research document.",
+    "All recorded managed children/workers were separately checked stopped after completion."
+  ]
+}

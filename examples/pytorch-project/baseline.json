@@ -1,0 +1,14 @@
+{
+  "name": "Baseline learning rate 0.01",
+  "command": ["python3", "train.py", "--lr", "0.01", "--epochs", "12", "--seed", "7"],
+  "metric": "val_accuracy",
+  "direction": "maximize",
+  "protocol": {
+    "dataset": "synthetic-linear-v1-generator-seed-42",
+    "split": "first-256-train-last-64-validation",
+    "evaluation": "argmax-accuracy-final-epoch-v1"
+  },
+  "seed": 7,
+  "timeout_seconds": 60,
+  "source_files": ["train.py"]
+}

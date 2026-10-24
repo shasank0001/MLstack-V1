@@ -1,0 +1,49 @@
+# Dependencies and compiled output
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Private provider configuration and credentials
+.pi/
+.env
+.env.*
+!.env.example
+auth.json
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local experiment state, databases and artifacts
+.mlstack/
+mlruns/
+mlartifacts/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.db
+*.db-*
+examples/pytorch-project/results/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Scratch research, evaluation output and local logs
+work/
+research_memory_paths/
+*.log
+*.tmp
+*.bak
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

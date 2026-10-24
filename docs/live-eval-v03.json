@@ -1,0 +1,160 @@
+{
+  "version": "0.3.0",
+  "date": "2026-10-22",
+  "model": "openrouter/minimax/minimax-m3.1-flash:free",
+  "passed": true,
+  "failure": null,
+  "report": "work/agent-evals/pytorch-PX9JWT/.mlstack/agent-eval-report.json",
+  "automated_tests": {
+    "passed": 55,
+    "failed": 0,
+    "skipped": 0
+  },
+  "phases": [
+    {
+      "name": "project-definition",
+      "mode": "discuss",
+      "duration_ms": 12094
+    },
+    {
+      "name": "project-plan",
+      "mode": "plan",
+      "duration_ms": 15657
+    },
+    {
+      "name": "baseline",
+      "mode": "act",
+      "duration_ms": 17722
+    },
+    {
+      "name": "candidate-and-finding",
+      "mode": "act",
+      "duration_ms": 22329
+    },
+    {
+      "name": "fresh-session-recall",
+      "mode": "act",
+      "duration_ms": 30241
+    },
+    {
+      "name": "correction",
+      "mode": "act",
+      "duration_ms": 31754
+    },
+    {
+      "name": "actual-failure",
+      "mode": "act",
+      "duration_ms": 93831
+    },
+    {
+      "name": "refused-launch",
+      "mode": "act",
+      "duration_ms": 26632
+    },
+    {
+      "name": "start-and-stop",
+      "mode": "act",
+      "duration_ms": 77207
+    }
+  ],
+  "approvals": [
+    {
+      "phase": "baseline",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "candidate-and-finding",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "actual-failure",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "refused-launch",
+      "kind": "run",
+      "approved": false
+    },
+    {
+      "phase": "start-and-stop",
+      "kind": "run",
+      "approved": true
+    },
+    {
+      "phase": "start-and-stop",
+      "kind": "stop",
+      "approved": true
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-1dae193f-f42",
+      "status": "completed",
+      "final_metric": 0.484375,
+      "ingestion": "complete",
+      "has_job": true,
+      "exit_code": 0,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-1cf2ce48-825",
+      "status": "completed",
+      "final_metric": 0.71875,
+      "ingestion": "complete",
+      "has_job": true,
+      "exit_code": 0,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-d5549c94-f4d",
+      "status": "failed",
+      "final_metric": null,
+      "ingestion": "not_available",
+      "has_job": true,
+      "exit_code": 1,
+      "signal": null,
+      "reason": null,
+      "child_alive": false,
+      "mlflow_synced": true
+    },
+    {
+      "id": "run-6b9c588d-6ad",
+      "status": "proposed",
+      "final_metric": null,
+      "ingestion": "pending",
+      "has_job": false,
+      "exit_code": null,
+      "signal": null,
+      "reason": null,
+      "child_alive": null,
+      "mlflow_synced": false
+    },
+    {
+      "id": "run-e5eba5b2-9ec",
+      "status": "cancelled",
+      "final_metric": null,
+      "ingestion": "not_available",
+      "has_job": true,
+      "exit_code": null,
+      "signal": "SIGTERM",
+      "reason": "User requested cancellation",
+      "child_alive": false,
+      "mlflow_synced": true
+    }
+  ],
+  "limits": [
+    "Synthetic CPU project with one seed per configuration. No general model-quality or scientific-validity guarantee.",
+    "Live assertions validate observed values, modes, approvals, durable state and process outcomes, not every generated statement.",
+    "Observed prose issues: verbosity; overbroad statistical/convergence claims; describing a net accuracy gain as a known set of flipped predictions.",
+    "Final natural-language parser refinements were checked deterministically after the live workflow."
+  ]
+}
